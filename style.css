@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #f5f0e1;
+  color: #1a2e1a;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  background: #142716;
+  padding: 18px 15px;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.navigation a {
+  color: #c9a227;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.navigation a:hover {
+  color: #f0cf55;
+  transform: translateY(-2px);
+}
+
+#compteur-panier {
+  background: #c9a227;
+  color: #142716;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 12px;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 80px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+#accueil {
+  background: #142716;
+}
+
+.carte {
+  width: 100%;
+  max-width: 720px;
+
+  padding: 50px 35px;
+
+  background: #24392a;
+  color: #f5f0e1;
+
+  border: 2px solid #c9a227;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+h1 {
+  color: #c9a227;
+  font-size: 48px;
+  margin: 0 0 8px;
+}
+
+.sous-titre {
+  color: #eee;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+
+  margin: 25px 0;
+}
+
+.photo {
+  width: 105px;
+  height: 105px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+  border: 3px solid transparent;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.photo:hover {
+  transform: scale(1.08);
+}
+
+.photo.selectionnee {
+  border-color: #c9a227;
+  transform: scale(1.08);
+}
+
+.photo.grisee {
+  opacity: 0.45;
+}
+
+#description {
+  min-height: 28px;
+  font-size: 18px;
+}
+
+#compteur {
+  color: #c9a227;
+  font-size: 14px;
+  font-style: italic;
+}
+
+button {
+  margin-top: 18px;
+  padding: 11px 22px;
+
+  background: #c9a227;
+  color: #142716;
+
+  border: none;
+  border-radius: 7px;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #e5c44d;
+  transform: translateY(-2px);
+}
+
+
+/* ==============================
+   PRODUITS
+============================== */
+
+#produits {
+  background: #f5f0e1;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.section h2::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 3px;
+
+  background: #c9a227;
+
+  margin: 12px auto 0;
+}
+
+.intro {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.grille-produits {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 25px;
+}
+
+.produit {
+  overflow: hidden;
+
+  background: white;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,0.12);
+
+  transition: 0.25s;
+}
+
+.produit:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.18);
+}
+
+.produit img {
+  width: 100%;
+  height: 170px;
+
+  object-fit: cover;
+}
+
+.contenu-produit {
+  padding: 15px;
+}
+
+.produit h3 {
+  color: #1a2e1a;
+  margin: 5px 0 8px;
+}
+
+.produit p {
+  color: #555;
+  font-size: 14px;
+  min-height: 40px;
+}
+
+.prix {
+  display: inline-block;
+
+  padding: 7px 15px;
+  margin-top: 8px;
+
+  background: #c9a227;
+  color: #142716;
+
+  border-radius: 20px;
+
+  font-weight: bold;
+}
+
+.ajouter-panier {
+  display: block;
+
+  width: 90%;
+  margin: 15px auto 5px;
+
+  background: #1a2e1a;
+  color: #fff;
+}
+
+.ajouter-panier:hover {
+  background: #2d4c2d;
+}
+
+
+/* ==============================
+   PANIER
+============================== */
+
+#panier {
+  background: #eee8d6;
+}
+
+#liste-panier {
+  width: 100%;
+  max-width: 600px;
+}
+
+.ligne-panier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: white;
+
+  padding: 13px 18px;
+  margin-bottom: 10px;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ligne-panier button {
+  background: #c9370a;
+  color: white;
+
+  margin: 0;
+  padding: 6px 12px;
+
+  font-size: 12px;
+}
+
+#total-panier {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#confirmation {
+  color: #1a2e1a;
+  font-weight: bold;
+}
+
+
+/* ==============================
+   CONTACT
+============================== */
+
+#contact {
+  min-height: 60vh;
+
+  background: #24392a;
+
+  color: #f5f0e1;
+}
+
+.infos-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-size: 18px;
+}
+
+.lien-email {
+  color: #c9a227;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lien-email:hover {
+  color: #f0cf55;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+  .navigation {
+    gap: 15px;
+    padding: 14px 8px;
+  }
+
+  .navigation a {
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+
+  .carte {
+    padding: 35px 18px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .ligne-panier {
+    font-size: 14px;
+  }
+}

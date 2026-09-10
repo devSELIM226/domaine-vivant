@@ -1,0 +1,286 @@
+<nav class="navigation">
+  <a href="#accueil">Accueil</a>
+  <a href="#produits">Produits</a>
+  <a href="#panier">Panier (<span id="compteur-panier">0</span>)</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="accueil" class="section">
+  <div class="carte">
+    <h1>Domaine Vivant</h1>
+    <p class="sous-titre">Des produits de la ferme, avec passion 🌿</p>
+
+    <div class="galerie">
+
+      <!-- 1. VOLAILLES -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9NAu8KqdZfCLoQr9bBIXaOg-COIB-QuWkLPCEPE6jIQ&s=10"
+        alt="Poules de ferme"
+        class="photo"
+        data-message="🐔 Nos volailles sont élevées en plein air."
+      >
+
+      <!-- 2. BÉLIER -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnj45JsjJP0v6QpYVqiPOqn4B5u9793v3s15MJNn0vaw&s=10"
+        alt="Bélier de ferme"
+        class="photo"
+        data-message="🐏 Nos petits ruminants sont nourris naturellement."
+      >
+
+      <!-- 3. PRODUITS LAITIERS -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQG3WjuNGwb2dxCOjmrSKRxbYxzpbOLQjYSVOpF5LJw&s=10"
+        alt="Lait et produits laitiers"
+        class="photo"
+        data-message="🥛 Découvrez notre lait et nos produits laitiers artisanaux."
+      >
+
+      <!-- 4. PORC & CHARCUTERIE -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBK26bczF9wfQT3mYbIny963V9HTJJZ_F7M-D3IuGwwQ&s=10"
+        alt="Porcs de ferme"
+        class="photo"
+        data-message="🐖 Notre élevage de porcs fait partie de notre domaine."
+      >
+
+      <!-- 5. MIEL -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdzd0sQy6jJi0jNSzsWixc-cj4zKDiBljV2MtT1A33A&s=10"
+        alt="Pot de miel"
+        class="photo"
+        data-message="🍯 Notre miel est récolté avec soin."
+      >
+
+    </div>
+
+    <p id="description">Bienvenue sur notre ferme en ligne.</p>
+
+    <button id="bouton-info">En savoir plus</button>
+
+    <p id="compteur">Messages découverts : 0</p>
+  </div>
+</section>
+
+
+<!-- ==============================
+     PRODUITS
+============================== -->
+
+<section id="produits" class="section">
+
+  <h2>Nos produits</h2>
+
+  <p class="intro">
+    Découvrez les produits de notre domaine.
+  </p>
+
+  <div class="grille-produits">
+
+    <!-- VOLAILLES -->
+    <div class="produit">
+
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9NAu8KqdZfCLoQr9bBIXaOg-COIB-QuWkLPCEPE6jIQ&s=10"
+        alt="Volailles de ferme"
+      >
+
+      <div class="contenu-produit">
+
+        <h3>🐔 Volailles</h3>
+
+        <p>
+          Poulets et œufs élevés en plein air.
+        </p>
+
+        <span class="prix">8 €</span>
+
+        <button
+          class="ajouter-panier"
+          data-id="volailles"
+          data-nom="Volailles"
+          data-prix="8">
+          Ajouter au panier
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- PETITS RUMINANTS -->
+    <div class="produit">
+
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnj45JsjJP0v6QpYVqiPOqn4B5u9793v3s15MJNn0vaw&s=10"
+        alt="Bélier de ferme"
+      >
+
+      <div class="contenu-produit">
+
+        <h3>🐏 Petits ruminants</h3>
+
+        <p>
+          Chèvres et moutons nourris à l'herbe.
+        </p>
+
+        <span class="prix">15 €</span>
+
+        <button
+          class="ajouter-panier"
+          data-id="ruminants"
+          data-nom="Petits ruminants"
+          data-prix="15">
+          Ajouter au panier
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- PRODUITS LAITIERS -->
+    <div class="produit">
+
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQG3WjuNGwb2dxCOjmrSKRxbYxzpbOLQjYSVOpF5LJw&s=10"
+        alt="Produits laitiers"
+      >
+
+      <div class="contenu-produit">
+
+        <h3>🥛 Produits laitiers</h3>
+
+        <p>
+          Lait, fromage et yaourts artisanaux.
+        </p>
+
+        <span class="prix">5 €</span>
+
+        <button
+          class="ajouter-panier"
+          data-id="laitiers"
+          data-nom="Produits laitiers"
+          data-prix="5">
+          Ajouter au panier
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- PORC & CHARCUTERIE -->
+    <div class="produit">
+
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBK26bczF9wfQT3mYbIny963V9HTJJZ_F7M-D3IuGwwQ&s=10"
+        alt="Porcs de ferme"
+      >
+
+      <div class="contenu-produit">
+
+        <h3>🐖 Porc & charcuterie</h3>
+
+        <p>
+          Élevage et transformation artisanale.
+        </p>
+
+        <span class="prix">12 €</span>
+
+        <button
+          class="ajouter-panier"
+          data-id="porc"
+          data-nom="Porc & charcuterie"
+          data-prix="12">
+          Ajouter au panier
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- MIEL -->
+    <div class="produit">
+
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdzd0sQy6jJi0jNSzsWixc-cj4zKDiBljV2MtT1A33A&s=10"
+        alt="Pot de miel"
+      >
+
+      <div class="contenu-produit">
+
+        <h3>🍯 Miel de la ferme</h3>
+
+        <p>
+          Miel récolté avec soin et non pasteurisé.
+        </p>
+
+        <span class="prix">6 €</span>
+
+        <button
+          class="ajouter-panier"
+          data-id="miel"
+          data-nom="Miel de la ferme"
+          data-prix="6">
+          Ajouter au panier
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     PANIER
+============================== -->
+
+<section id="panier" class="section">
+
+  <h2>Votre panier</h2>
+
+  <div id="liste-panier"></div>
+
+  <p id="total-panier">
+    Total : 0 €
+  </p>
+
+  <button id="commander">
+    Passer commande
+  </button>
+
+  <p id="confirmation"></p>
+
+</section>
+
+
+<!-- ==============================
+     CONTACT
+============================== -->
+
+<section id="contact" class="section">
+
+  <h2>Contact</h2>
+
+  <div class="infos-contact">
+
+    <p>
+      📧
+      <a
+        href="mailto:sawadogoabdoulaziz342@gmail.com"
+        class="lien-email">
+        sawadogoabdoulaziz342@gmail.com
+      </a>
+    </p>
+
+    <p>
+      📞
+      <a
+        href="tel:+22664587858"
+        class="lien-email">
+        +226 64 58 78 58
+      </a>
+    </p>
+
+  </div>
+
+</section>
